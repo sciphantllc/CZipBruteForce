@@ -10,6 +10,24 @@ has been observed to attempt over 160M passwords/second on a 3.6 Ghz
 machine with 8 logical processors when using the 64-bit release build.
 
 This tool was implemented as a proof of the various implemented 
-concepts and is not meant to be a user-friendly tool, which is an 
-exercise left to the reader.  A description of these concepts is 
+concepts and is not meant to be a user-friendly tool (which is an 
+exercise left to the reader).  A description of these concepts is 
 in the included file "Zip Password Cracking.docx".
+
+To build: 
+	1) Download the zlib source code from http://zlib.net/ and put
+	it so that the zlib-<version> directory is in the CZipBruteForce
+	solution directory so it will look like:
+		CZipBruteForce
+		 |- zlib-1.2.8
+			 |- adler32.c
+			 |- ...
+
+	2) Build the assembly libraries found in:
+		zlib-1.2.8\contrib\masmx64 and masmx86
+	Directions for these are found in the readme.txt files in those 
+	directories.  Alternatively, change the CZipBruteForce project to use the
+	"ReleaseWithoutAsm" versions of the zlibstat.lib.  The non-assembly 
+	version is likely slower, but not by a huge percentage.
+
+	3) Reload the "zlibstat" project in this solution.
