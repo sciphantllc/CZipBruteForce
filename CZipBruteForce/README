@@ -1,0 +1,15 @@
+========================================================================
+          CZipBruteForce - a fast zip password cracker
+========================================================================
+
+CZipBruteForce is a fast, multi-threaded zip password brute force tool.
+
+Given a non-AES password-protected zip file, it will attempt to find the
+password by using all combinations of letters, numbers, and symbols.  It
+has been observed to attempt over 160M passwords/second on a 3.6 Ghz 
+machine with 8 logical processors when using the 64-bit release build.
+
+This tool was implemented as a proof of the various implemented 
+concepts and is not meant to be a user-friendly tool, which is an 
+exercise left to the reader.  A description of these concepts is 
+in the included file "Zip Password Cracking.docx".
